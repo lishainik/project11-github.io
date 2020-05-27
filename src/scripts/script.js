@@ -1,3 +1,4 @@
+import "../pages/index.css";
 
 const newCardClass = (name, link) => (new Card(name, link))
 const clearForms = () => {
