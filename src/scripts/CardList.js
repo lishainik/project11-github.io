@@ -1,4 +1,6 @@
-class CardList {
+
+
+export default class CardList {
   constructor(container, createFunc, api) {
     this.container = container;
     this.array = []

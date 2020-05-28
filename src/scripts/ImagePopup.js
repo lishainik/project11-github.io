@@ -1,4 +1,6 @@
-class ImagePopup extends Popup {
+import Popup from './Popup';
+
+export default class ImagePopup extends Popup {
 
   assignBackgroundImage(event) {
     const popup = this.popup;

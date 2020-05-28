@@ -1,5 +1,11 @@
 import "../pages/index.css";
-
+import Api from './Api';
+import Card from './Card';
+import CardList from './CardList';
+import Popup from './Popup';
+import ImagePopup from './ImagePopup';
+import UserInfo from './UserInfo';
+import FormValidator from './FormValidator';
 const newCardClass = (name, link) => (new Card(name, link))
 const clearForms = () => {
   document.forms.new.reset()
