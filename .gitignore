@@ -4,3 +4,4 @@ node_modules
 dist
 src/debug.log
 debug.log
+dist/debug.log
