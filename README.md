@@ -6,6 +6,6 @@
 
 Проект разворачивается с помощью двух команд:
 
-`<npm run build>`
+`npm run build`
 
-`<npm run deploy>`
+`npm run deploy`
