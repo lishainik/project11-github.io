@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -45,7 +45,7 @@
     </div>
     <div class="popup place__popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new">
             <input  type="text" name="name" class="popup__input popup__input_type_place" placeholder="Название" required minlength="2" maxlength="30">
@@ -61,7 +61,7 @@
 
 <div class="popup profile__popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="edit">
             <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required type="text" minlength="2" maxlength="30">
@@ -77,20 +77,14 @@
 <div class="popup popup__picture-zoom">
     <div class="popup__image">
     <img class="popup__picture"> 
-      <img src="./images/close.svg" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
     </div>
     </div>
       </div>
 
   </div>
-<script src="./scripts/Api.js"></script>
-<script src='./scripts/Card.js'></script>
-<script src='./scripts/CardList.js'></script>
-<script src='./scripts/FormValidator.js'></script>
-<script src='./scripts/Popup.js'></script>
-<script src='./scripts/ImagePopup.js'></script>
-<script src='./scripts/UserInfo.js'></script>
-<script src="./scripts/script.js"></script>
+<script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+
 
 
 </body>

@@ -1,4 +1,11 @@
-
+import "../pages/index.css";
+import Api from './Api';
+import Card from './Card';
+import CardList from './CardList';
+import Popup from './Popup';
+import ImagePopup from './ImagePopup';
+import UserInfo from './UserInfo';
+import FormValidator from './FormValidator';
 const newCardClass = (name, link) => (new Card(name, link))
 const clearForms = () => {
   document.forms.new.reset()
@@ -87,43 +94,3 @@ placePopup.setEventListeners();
 profilePopup.setEventListeners();
 imagePopup.setEventListeners();
 profile.setUserInfo();
-
-
-	/**
-  * Здравствуйте. 
-  * 
-  * !!Необходимо убрать реализацию из класса APi
-  * В целом класс правильно организован, методы класса полноценные, но реализацию надо перенести в классы которые были созданы в 8 спринте, а методы класса Api
-  * вызывать из других классов.
-  * Так же необходимо перенести из текущего файла вызов методов класса Api в другие классы.
-  * 
-  * В текущем файле должно получиться примерно такое:
-  const container = document.querySelector('.places-list'); // место куда записывать карточки
-  const cards = []; // массив с карточками
-  const words = {ru: { validationLenght: 'Должно быть от 2 до 30 символов'}};
-  const config = {authorization: "ключ",ip: "http://95.216.175.5/cohort7",}; // настройки
-  const api = new Api(config);
-  const card = new Card(api);
-  const validation = new FormValidator({words:words});
-  const cardList = new CardList({card:card, api:api});
-  cardList.render(container, cards);
-  const popupCard = new PopupCard({ validation:validation,api:api});
-  const popupProfile = new PopupProfile({ validation:validation,api:api});
-  const popupImage = new PopupImage();
-   *
-  * *
-    * Класс Api это отдельный класс, который ничего не знает о других классах и методах
-    * Вы можете только получать данные из этого класса и использовать эти данные.
-    * Представьте, что я дам Вам другой класс(допустим DataBase) к внутренностям которого вы не будете иметь доступ и даже прочитать этот файл не сможете
-    * предварительно скажу, что у него есть несколько методов  getInitialCards deleteCard addCard, editUserInfo, setUserInfo и так далее
-    * Который только возвращает/записывает данные, а вы можете получить только обращаясь к этим методам.
-    * Соответственно в классе нельзя реализовать такие методы как querySelector или обратиться к другому классу, а только обратиться к методам сервера или базы.
-    * Получается отдельная обязанность. Таким же способом Вы обращаетесь к серверу. Вы не знаете, что на сервере, даже язык программирования, но вы знаете методы
-    * к которым обращаетесь и способ обращения. Это и есть обязанность отдельного класса.
-    
-
-   !! После добавленияя карточки, карточка отображается с ошибками, это надо исправить.
-   * 
-   * работа принимается только при исправлении всех "Надо исправить"
-   *
-  */

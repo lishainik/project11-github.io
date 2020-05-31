@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
   constructor(popupElement, cleaner) {
     this.popup = popupElement;
     this.cleaner = cleaner
